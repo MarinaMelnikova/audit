@@ -16,3 +16,81 @@ body {
   width: 300px;
   height: 150px;
 }
+
+h1 {
+  margin: 1em 0 0.75em;
+  padding: 0 0 5px 0;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 25px;
+  font-family: 'Carrois Gothic', sans-serif;
+  text-align: center;
+}
+
+#loginForm {
+  width: 290px;
+  padding: 24px 24px 0;
+  margin: 25px auto 0;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+  font: 14px/18px Arial, Tahoma, sans-serif;
+}
+
+#loginForm .field {
+  margin: 0 0 18px;
+}
+
+#loginForm .field label {
+  display: block;
+  margin: 0 0 11px;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+#loginForm .field .input {
+  border-radius: 4px;
+}
+
+#loginForm .field input {
+  font: 12px Arial, Tahoma, sans-serif;
+  color: #444;
+  width: 262px;
+  padding: 9px 13px;
+  border: 1px solid #1F6A7F;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px #C3DEE6, 0 0 0 4px #F9FFF9;
+  outline: none;
+}
+
+#loginForm .field input:focus {
+  border-color: #004E63;
+  box-shadow: inset 1px 1px 2px #E0EEE0, 0 0 3px #E0EEE0, 0 0 0 3px #E0EEE0;
+}
+
+#loginForm .submit {
+  overflow: hidden;
+  margin: 30px -24px 0;
+  padding: 10px 0px;
+  background: #F5FCF5;
+  border-top: 1px solid #004E63;
+  text-align: center;
+}
+
+#loginForm .submit button {
+  padding: 6px 20px;
+  border: 1px solid #C9DDC9;
+  border-radius: 15px;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 23px;
+  width: 60%;
+  height: 48px;
+  float: inherit;
+  background-color: #E0EEE0;
+  cursor: pointer;
+  outline: none;
+}
+#loginForm .submit button::-moz-focus-inner{border:0}
+
