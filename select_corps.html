@@ -2,12 +2,58 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="audit.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
   </head>
 
   <body>
     <div id="main">
-      <img src="polytech_logo.svg" id="logo"></img>
+      <img src="polytech_logo.svg" id="logo">
+      <div id="authorized">
+      <img src="icon3.png" id="icon">
+      <span id="username"></span>
+      </div>
+
+      <hr/>
+      <div class="line_button">
+        <button type="submit">ГЗ</button>
+        <button type="submit">11 к.</button>
+        <button type="submit">Мех. к.</button>
+        <button type="submit">5 к.</button>
+      </div>
+
+      <div class="line_button">
+        <button type="submit">Хим к.</button>
+        <button type="submit">4 к.</button>
+        <button type="submit">2 к.</button>
+        <button type="submit">НУК</button>
+      </div>
+
+      <div class="line_button">
+        <button type="submit">15 к.</button>
+        <button type="submit">НОЦ</button>
+        <button type="submit">10 к.</button>
+        <button type="submit">3 к.</button>
+      </div>
+
+      <div class="line_button">
+        <button type="submit">6 к.</button>
+        <button type="submit">ГК</button>
+        <button type="submit">8 к.</button>
+        <button type="submit">1 к.</button>
+      </div>
+
+      <div class="line_button">
+        <button type="submit">ГК-2</button>
+        <button type="submit">9 к.</button>
+        <button type="submit">СК</button>
+        <button type="submit">Не опр.</button>
+      </div>
     </div>
+
+    <script>
+      console.log(localStorage.login);
+      username.textContent = localStorage.login;
+    </script>
   </body>
 </html>

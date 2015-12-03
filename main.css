@@ -1,0 +1,80 @@
+    body {
+  margin-top: 0;
+}
+
+#main {
+  background: #F8F8FF;
+  margin: auto;
+  width: 720px;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+#logo {
+  display: inline-block;
+  margin: 0px auto;
+  margin-left: 20px;
+  width: 300px;
+  height: 120px;
+}
+
+h1 {
+  margin: 1em 0 0.75em;
+  padding: 0 0 5px 0;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 25px;
+  font-family: 'Carrois Gothic', sans-serif;
+  text-align: center;
+}
+
+hr {
+  background-color: #004E63;
+  height: 1px;
+  border: none;
+}
+button {
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  border: none;
+  width: 150px;
+  height: 34px;
+  /* display: inline-block; */
+  /* position: absolute; */
+  padding: 6px 20px;
+  border: 1px solid #C9DDC9;
+  border-radius: 15px;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 23px;
+  width: 23%;
+  /* margin: 19px 16px; */
+  margin-right: 3px;
+  height: 48px;
+  float: inherit;
+  background-color: #E0EEE0;
+  cursor: pointer;
+  outline: none;
+}
+ .line_button {
+   margin-top: 29px;
+    margin-left: auto;
+    /* display: inline; */
+    margin-left: 31px;}
+
+  #icon {
+    width: 36px;
+  }
+  #username {
+    vertical-align: super;
+    color: #004E63;
+    font-weight: normal;
+    font-size: 25px;
+    font-family: 'Carrois Gothic', sans-serif;
+  }
+  #authorized {
+display: inline-block;
+    position: relative;
+    left: 192px;
+    bottom: 20px;
+}

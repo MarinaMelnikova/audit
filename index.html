@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="audit.css">
+    <script src="main.js"></script>
   </head>
 
   <body>
@@ -10,7 +11,7 @@
       <img src="polytech_logo.svg" id="logo"></img>
       <div><span><h1>Проверка состояния аудиторного фонда</h1><span></div>
 
-    <form id="loginForm">
+    <form id="loginForm" action="select_corps.html" onsubmit="doLogin(this); return false;">
       <div class="field">
         <label>Имя пользователя:</label>
         <div class="input"><input type="text" id="login" /></div>
@@ -27,5 +28,11 @@
     </form>
 
     </div>
+    <script>
+    function doLogin(form) {
+  localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
+  form.submit(); // продолжаем сабмитить
+}
+    </script>
   </body>
 </html>
