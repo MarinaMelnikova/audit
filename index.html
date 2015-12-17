@@ -2,35 +2,81 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="audit.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="opentip.css">
+    <script src="opentip.js"></script>
+    <script src="main.js"></script>
   </head>
 
   <body>
     <div id="main">
-      <img src="polytech_logo.svg" id="logo"></img>
-      <div><span><h1>Проверка состояния аудиторного фонда</h1><span></div>
-
-    <form id="loginForm" action="select_corps.html" onsubmit="doLogin(this); return false;">
-      <div class="field">
-        <label>Имя пользователя:</label>
-        <div class="input"><input type="text" id="login" /></div>
+      <img src="polytech_logo.svg" id="logo">
+      <div id="authorized">
+      <img src="icon3.png" id="icon">
+      <span id="username" data-ot="текст всплывающей подсказки"></span>
+      <div class = "exit">
+        <a href="#">Инструкции</a>
+        <a href="sign_in.html" >Выход</a>
+      </div>
       </div>
 
-      <div class="field">
-        <label>Пароль:</label>
-        <div class="input"><input type="password" id="pass" /></div>
-      </div>
+      <ul id="menu">
+        <li class="active">
+          <a href="index.html">Список Зданий</a>
+        </li>
+        <li>
+          <a href="auditory_projector.html">Аудитории с проектором</a>
+        </li>
+        <li>
+          <a href="big_auditor.html" >Большие аудитории</a>
+        </li>
+      </ul>
 
-      <div class="submit">
-        <button type="submit">Войти</button>
-      </div>
-    </form>
+      <form id="corpForm" action="building.html" >
+        <div>
+          <div class="line_button">
+            <button type="submit" data-ot="Главное здание" id="corp" onclick="setBuilding(this)">ГЗ</button>
+            <button type="submit" data-ot="11-й учебный корпус" id="corp" onclick="setBuilding(this)">11 к.</button>
+            <button type="submit" data-ot="Механический корпус" id="corp" onclick="setBuilding(this)">Мех. к.</button>
+            <button type="submit" data-ot="5-й учебный корпус" id="corp" onclick="setBuilding(this)">5 к.</button>
+          </div>
 
+          <div class="line_button">
+            <button type="submit" data-ot="Химический корпус" id="corp" onclick="setBuilding(this)">Хим к.</button>
+            <button type="submit" data-ot="4-й учебный корпус" id="corp" onclick="setBuilding(this)">4 к.</button>
+            <button type="submit" data-ot="2-й учебный корпус" id="corp" onclick="setBuilding(this)">2 к.</button>
+            <button type="submit" data-ot="16-й учебный корпус (НУК)" id="corp" onclick="setBuilding(this)">16 к.</button>
+          </div>
+
+          <div class="line_button">
+            <button type="submit" data-ot="15-й учебный корпус" id="corp" onclick="setBuilding(this)">15 к.</button>
+            <button type="submit" data-ot="НОЦ УчК" id="corp" onclick="setBuilding(this)">НОЦ</button>
+            <button type="submit" data-ot="10-й учебный корпус" id="corp" onclick="setBuilding(this)">10 к.</button>
+            <button type="submit" data-ot="3-й учебный корпус" id="corp" onclick="setBuilding(this)">3 к.</button>
+          </div>
+
+          <div class="line_button">
+            <button type="submit" data-ot="6-й учебный корпус" id="corp" onclick="setBuilding(this)">6 к.</button>
+            <button type="submit" data-ot="Гидротехнический корпус-1" id="corp" onclick="setBuilding(this)">ГК</button>
+            <button type="submit" data-ot="8-й учебный корпус" id="corp" onclick="setBuilding(this)">8 к.</button>
+            <button type="submit" data-ot="1-й учебный корпус" id="corp" onclick="setBuilding(this)">1 к.</button>
+          </div>
+
+          <div class="line_button">
+            <button type="submit" data-ot="Гидротехнический корпус-2" id="corp" onclick="setBuilding(this)">ГК-2</button>
+            <button type="submit" data-ot="9-й учебный корпус" id="corp" onclick="setBuilding(this)">9 к.</button>
+            <button type="submit" data-ot="Спорткомплекс" id="corp" onclick="setBuilding(this)">СК</button>
+            <button type="submit" data-ot="Не определено" id="corp" onclick="setBuilding(this)">Не опр.</button>
+          </div>
+        </div>
+      </form>
     </div>
+
     <script>
-      function doLogin(form) {
-        localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
-        form.submit(); // продолжаем сабмитить
+      username.textContent = localStorage.login;
+
+      function setBuilding(link) {
+        localStorage.setItem('building', link.getAttribute('data-ot'));
       }
     </script>
   </body>

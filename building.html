@@ -15,22 +15,14 @@
 		<span id="username"></span>
     <div class = "exit">
       <a href="#">Инструкции</a>
-      <a href="#" onclick="history.back(); return false;">Выход</a>
+      <a href="sign_in.html" >Выход</a>
     </div>
     </div>
 
-  <ul id="menu">
-    <li><a href="#">Большие аудитории</a>
-    </li>
-    <li>
-      <a href="#">Аудитории с проектором</a>
-    </li>
-    <li>
-      <a href="#">Виды аудиторий</a>
-    </li>
-  </ul>
-
+  <hr>
+  <div id="building"></div>
 	<div id="blocks">
+
 	<span><h2>Выбор аудитории:</h2></span>
 	<input type="text" class="input" maxlength="30" placeholder="Введите номер аудитории" id="search" />
 
@@ -71,10 +63,8 @@
 
       }
   }
-    console.log(localStorage.login);
     username.textContent = localStorage.login;
-
-
+    building.textContent = localStorage.building;
 </script>
 </body>
 </html>

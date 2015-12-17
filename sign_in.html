@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="audit.css">
+  </head>
+
+  <body>
+    <div id="main">
+      <img src="polytech_logo.svg" id="logo"></img>
+      <div><span><h1>Проверка состояния аудиторного фонда</h1><span></div>
+
+    <form id="loginForm" action="index.html" onsubmit="doLogin(this); return false;">
+      <div class="field">
+        <label>Имя пользователя:</label>
+        <div class="input"><input type="text" id="login" /></div>
+      </div>
+
+      <div class="field">
+        <label>Пароль:</label>
+        <div class="input"><input type="password" id="pass" /></div>
+      </div>
+
+      <div class="submit">
+        <button type="submit">Войти</button>
+      </div>
+    </form>
+
+    </div>
+    <script>
+      function doLogin(form) {
+        localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
+        form.submit(); // продолжаем сабмитить
+      }
+    </script>
+  </body>
+</html>

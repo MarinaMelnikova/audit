@@ -7,7 +7,6 @@ body {
   margin: auto;
   width: 720px;
   min-height: 100vh;
-  overflow: auto;
 }
 
 #logo {
@@ -59,9 +58,9 @@ li{
   color: #004E63;
 }
 
-a{
-   text-decoration: none; /* Убирает подчеркивание для ссылок */
-   color: #004E63;
+.exit a{
+ color: #004E63;
+ font-style: italic;
 }
 
 hr {
@@ -127,46 +126,8 @@ button {
   bottom: 20px;
 }
 
-a.class3:link, a.class3:visited {
-  color: #336699; */
-    font-family: 'Comic Sans MS';
-    /* font-size: 20px; */
-    /* text-decoration: none; */
-    /* background-color: #cccccc; */
-    /* padding: 3px; */
-    /* border: 1px solid #666666; */
-    margin-left: 34px;
-    color: #004E63;
-    font-weight: normal;
-    font-size: 15px;
-}
-
-a.class3:hover {
-  color:#cccccc;
-  font-family:'Comic Sans MS';
-  font-size:20px;
-  text-decoration:none;
-  background-color:#336699;
-  padding:10px;
-  border:1px solid #000033;
-}
-
-a.class3:active {
-  color: #336699; */
-  font-family: 'Comic Sans MS';
-  /* font-size: 20px; */
-  /* text-decoration: none; */
-  /* background-color: #cccccc; */
-  /* padding: 3px; */
-  /* border: 1px solid #666666; */
-  margin-left: 34px;
-  color: #004E63;
-  font-weight: normal;
-  font-size: 15px;
-}
-
 #blocks{
-  margin: 20px 0 0 20px;
+  margin: 40px 0 0 25px;
 }
 
 #search{
@@ -213,7 +174,7 @@ a.class3:active {
   height: 40px;
   padding: 0;
   margin: 0;
-  width: 180px;
+  width: 240px;
   text-align: center;
   background: #004E63;
   position: relative;
@@ -223,7 +184,7 @@ a.class3:active {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 180px;
+  width: 240px;
   display: none;
   position: absolute;
   left: 0;
@@ -233,32 +194,161 @@ a.class3:active {
   float: none;
   height: 50px;
   margin: 0;
-  width: 180px;
+  width: 240px;
   text-align: center;
   background: #2E6E7F;
   }
 
+li.active {
+  background: #C2DCC2 !important;
+}
+
+li.active a{
+  color: #004E63 !important;
+}
+
+.dop {
+  color: #E0EEE0 !important;
+}
+
 #menu li a {
   display: block;
-  width: 180px;
+  width: 240px;
   height: 33px;
   color: #E0EEE0;
   text-decoration: none;
   font-weight: normal;
   font-size: 16px;
   }
+
 #menu li:hover ul, #menu li.jshover ul {
   display: block;
   }
+
 #menu li:hover, #menu li.jshover {
   background: #C2DCC2;
 
   }
 
 #menu li:hover a {
-  color:#004E63;
+  color: #004E63;
 }
 
-.dop {
-  color: #E0EEE0 !important;
+#check{
+   margin: 60px 0 0px 0;
+}
+
+.check2{
+  margin: 20px 0 0px 35px;
+  display: block;
+}
+
+.check2_1{
+  margin: 8px;
+  display: block;
+}
+
+.check2_num {
+  margin: 5px 0 10px 0px;
+  display: block;
+  border-radius: 4px;
+  font: 12px Arial, Tahoma, sans-serif;
+  color: #444;
+  width: 262px;
+  height:27px;
+  border: 1px solid #1F6A7F;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px #C3DEE6, 0 0 0 4px #F9FFF9;
+  outline: none;
+  font: 14px/18px Arial, Tahoma, sans-serif;
+
+}
+
+.check2_num_{
+  margin: 5px 0 10px 0px;
+  display: block;
+  border-radius: 4px;
+  font: 12px Arial, Tahoma, sans-serif;
+  color: #444;
+  width: 200px;
+  height:18px;
+  border: 1px solid #1F6A7F;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px #C3DEE6, 0 0 0 4px #F9FFF9;
+  outline: none;
+  font: 14px/18px Arial, Tahoma, sans-serif;
+}
+
+.label{
+  margin: 0 0 0 0px;
+  padding: 0 0 5px 0;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
+.label_{
+  margin: 0 0 0 0px;
+  padding: 0 0 5px 0;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 13px;
+  font-family: 'Carrois Gothic', sans-serif;
+
+}
+
+.radio_col{
+   display: block;
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  margin:0 0 0 10px;
+  border-radius: 70px;
+  background-color: #EFF4FF;
+  box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  width: 55px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.icon .handle {
+  width: 24px;
+  height: 24px;
+  border-radius: 10px;
+  position: absolute;
+  background: #FFF;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.icon .handle:before {
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon .handle:after {
+  content: "Есть";
+  color: #FFF;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: -28px;
+}
+
+.icon.on {
+  background: #004E63;
+}
+
+  .icon.on .handle {
+  left: 32px;
+}
+
+#building {
+  text-align: center;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 23px;
+  font-family: 'Carrois Gothic', sans-serif;
+  margin-top: 23px;
 }

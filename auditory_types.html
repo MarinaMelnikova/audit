@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="check.css">
+  <script src='http://code.jquery.com/jquery-latest.js'></script>
+</head>
+
+<body>
+
+<div id="main">
+    <img src="polytech_logo.svg" id="logo">
+    <div id="authorized">
+    <img src="icon3.png" id="icon">
+    <span id="username"></span>
+    <div class = "exit">
+      <a href="#">Инструкции</a>
+      <a href="sign_in.html" >Выход</a>
+    </div>
+</div>
+
+<ul id="menu">
+  <li><a href="big_auditor.html">Большие аудитории</a>
+  </li>
+  <li>
+    <a href="auditory_projector.html">Аудитории с проектором</a>
+  </li>
+  <li class="active">
+    <a href="auditory_types.html" >Виды аудиторий</a>
+  </li>
+</ul>
+
+<div id="piechart" style="width: 600px; height: 400px; margin: auto; margin-left: 100px"></div>
+</div>
+<script>
+  function doLogin(form) {
+    localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
+    form.submit(); // продолжаем сабмитить
+  }
+</script>
+
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+
+
+<script>
+  google.setOnLoadCallback(drawChart);
+
+  function randNumber() {
+    return Math.floor((Math.random() * 100) + 1);
+  }
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Type', 'Number'],
+      ['Лекции',  randNumber()],
+      ['Практики', randNumber()],
+      ['Компьютерные', randNumber()],
+      ['Лабораторные', randNumber()]
+    ]);
+
+    var options = {
+      title: 'Виды аудиторий в здании',
+      backgroundColor: 'transparent'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+</body>
+</html>

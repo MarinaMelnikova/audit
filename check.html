@@ -14,35 +14,124 @@
     <div id="authorized">
     <img src="icon3.png" id="icon">
     <span id="username"></span>
+    <div class = "exit">
+      <a href="#">Инструкции</a>
+      <a href="sign_in.html" >Выход</a>
     </div>
-    <ul id="menu">
-      <li><a href="#">Графики</a>
-        <ul>
-          <li><a href="#" class="dop">Количество больших аудиторий</a></li>
-          <li><a href="#" class="dop">Количество аудиторий с проектором</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Диаграммы</a>
-        <ul>
-          <li><a href="#" class="dop">Доля лекционных аудиторий</a></li>
-          <li><a href="#" class="dop">Доля компьютерных классов</a></li>
-          <li><a href="#" class="dop">Доля практических аудиторий</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Инструкции к работе</a>
-      </li>
-      <li>
-        <a href="#" onclick="history.back(); return false;">Выход</a>
-      </li>
-    </ul>
 </div>
+<hr/>
+
+<form method="post" >
+    <div class="check2">
+      <p>
+      <label class="label">Тип аудитории:</label>
+      <select class="check2_num">
+        <option>Лекционная</option>
+        <option>Практическая</option>
+        <option>Компьютерный класс</option>
+        <option>Лаборатория</option>
+        </select>
+      </p>
+    </div>
+
+    <div class="check2">
+      <label class="label"> Вмеcтимость </label>
+      <input type="number" class="check2_num" id="check2_" value="chairs_number" />
+    </div>
+
+     <!-- стулья -->
+    <div class="check2">
+      <label class="label"> Количество стульев </label>
+      <input type="number" class="check2_num"  id="check2_" value="chairs_number" />
+    </div>
+
+    <div class="check2">
+      <label class="label"> Тип столов: </label>
+      <div class="radio_col">
+        <input type="radio" name="A">Амфитеатр</input><br>
+        <input type="radio" name="A">Парты</input><br>
+        <input type="radio" name="A">Компьютерные столы</input><br>
+      </div>
+    </div>
+
+    <div class="check2">
+      <label class="label"> Компьютерное оснащение: </label>
+      <div class="check">
+        <input type="checkbox" name="coputer" onclick="showCat(this)" value="Компьютеры" />Компьютеры
+      </div>   <!-- компютеры -->
+      <div class="check2_1" id="div_coputer" style="display : none">
+        <label class="label_"> Количество компьютеров </label>
+        <input type="number" class="check2_num_" id="check2_" value="computer" />
+      </div>
+      <div class="check">
+        <input type="checkbox" value="Проектор" />Проектор
+      </div>
+      <div class="check">
+        <input type="checkbox" value="Специальное оборудование" />Специальное оборудование
+      </div>
+    </div>
+
+    <div class="check2">
+      <label class="label"> Количество розеток </label>
+      <input type="number" class="check2_num" id="check2_" value="chairs_number" />
+    </div>
+    <div class="check2">
+    <label class="label"> Наличие кондиционера </label>
+    <div class='icon col-sm-4'>
+    <div class="handle">
+        <div class='glyphicon glyphicon-headphones'></div>    </div>
+    </div>
+    </div>
+
+
+
+
+
+    <div class="check2">
+      <label class="label"> Площадь аудитории </label>
+      <input type="number" class="check2_num" id="check2_" value="chairs_number" />
+    </div>
+
+  </form>
+</div>
+</div>
+
+
   <script>
     function doLogin(form) {
       localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
       form.submit(); // продолжаем сабмитить
     }
   </script>
+
+  <script> // для количества компьютеров
+    function showCat(catname){
+    if(catname.checked) document.getElementById("div_"+catname.name).style.display = 'block';
+    else document.getElementById("div_"+catname.name).style.display = 'none';
+  }
+  </script>
+
+  <script>
+    document.getElementById('check2_').onkeypress = function (e) {
+    return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
+    }
+  </script>
+
+  <script>
+    (function() {
+      $(function() {
+      return $('.icon').on('click', function() {
+      if ($(this).hasClass('on')) {
+      return $(this).removeClass('on');
+      } else {
+      return $(this).addClass('on');
+      }
+      });
+      });
+
+    }).call(this);
+</script>
+
+
 </body>
 </html>

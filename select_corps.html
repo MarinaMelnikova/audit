@@ -14,35 +14,17 @@
       <div id="authorized">
       <img src="icon3.png" id="icon">
       <span id="username" data-ot="текст всплывающей подсказки"></span>
+      <div class = "exit">
+          <a href="#">Инструкции</a>
+          <a href="#" onclick="history.back(); return false;">Выход</a>
+      </div>
       </div>
 
-      <ul id="menu">
-        <li><a href="#">Графики</a>
-          <ul>
-            <li><a href="#" class="dop">Количество больших аудиторий</a></li>
-            <li><a href="#" class="dop">Количество аудиторий с проектором</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Диаграммы</a>
-          <ul>
-            <li><a href="#" class="dop">Доля лекционных аудиторий</a></li>
-            <li><a href="#" class="dop">Доля компьютерных классов</a></li>
-            <li><a href="#" class="dop">Доля практических аудиторий</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Инструкции к работе</a>
-        </li>
-        <li>
-          <a href="#" onclick="history.back(); return false;">Выход</a>
-        </li>
-      </ul>
-
+      <hr/>
       <form id="corpForm" action="select_auditor.html" >
         <div>
           <div class="line_button">
-            <button type="submit" data-ot="Opa" id="corp">ГЗ</button>
+            <button type="submit" data-ot="Главное здание" id="corp">ГЗ</button>
             <button type="submit" id="corp">11 к.</button>
             <button type="submit" id="corp">Мех. к.</button>
             <button type="submit" id="corp">5 к.</button>
