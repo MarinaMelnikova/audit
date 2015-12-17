@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="audit.css">
-    <script src="main.js"></script>
   </head>
 
   <body>
@@ -29,10 +28,10 @@
 
     </div>
     <script>
-    function doLogin(form) {
-  localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
-  form.submit(); // продолжаем сабмитить
-}
+      function doLogin(form) {
+        localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
+        form.submit(); // продолжаем сабмитить
+      }
     </script>
   </body>
 </html>

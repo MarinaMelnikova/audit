@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="check.css">
+  <script src='http://code.jquery.com/jquery-latest.js'></script>
+</head>
+
+<body>
+
+<div id="main">
+    <img src="polytech_logo.svg" id="logo">
+    <div id="authorized">
+    <img src="icon3.png" id="icon">
+    <span id="username"></span>
+    </div>
+    <ul id="menu">
+      <li><a href="#">Графики</a>
+        <ul>
+          <li><a href="#" class="dop">Количество больших аудиторий</a></li>
+          <li><a href="#" class="dop">Количество аудиторий с проектором</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Диаграммы</a>
+        <ul>
+          <li><a href="#" class="dop">Доля лекционных аудиторий</a></li>
+          <li><a href="#" class="dop">Доля компьютерных классов</a></li>
+          <li><a href="#" class="dop">Доля практических аудиторий</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Инструкции к работе</a>
+      </li>
+      <li>
+        <a href="#" onclick="history.back(); return false;">Выход</a>
+      </li>
+    </ul>
+</div>
+  <script>
+    function doLogin(form) {
+      localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
+      form.submit(); // продолжаем сабмитить
+    }
+  </script>
+</body>
+</html>

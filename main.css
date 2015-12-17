@@ -1,4 +1,4 @@
-    body {
+body {
   margin-top: 0;
 }
 
@@ -28,10 +28,47 @@ h1 {
   text-align: center;
 }
 
+h2{
+  margin: 0 0 0 0px;
+  padding: 0 0 5px 0;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
+ul{
+  padding: 0;
+   margin-left: 0px;
+   display: inline-block;
+}
+
+li{
+  list-style-type: none;
+}
+
+.list{
+  width: 150px;
+  padding: 5px 10px 0;
+  margin: 6px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+  font: 14px/18px Arial, Tahoma, sans-serif;
+  vertical-align: middle;
+  color: #004E63;
+}
+
+a{
+   text-decoration: none; /* Убирает подчеркивание для ссылок */
+   color: #004E63;
+}
+
 hr {
   background-color: #004E63;
   height: 1px;
   border: none;
+  margin:0;
 }
 button {
   background: linear-gradient(#F3F8F3,#E0EEE0);
@@ -56,25 +93,172 @@ button {
   cursor: pointer;
   outline: none;
 }
- .line_button {
-   margin-top: 29px;
-    margin-left: auto;
-    /* display: inline; */
-    margin-left: 31px;}
 
-  #icon {
-    width: 36px;
-  }
-  #username {
-    vertical-align: super;
+.line_button {
+ margin-top: 30px;
+  margin-left: auto;
+  /* display: inline; */
+  margin-left: 31px;}
+
+#icon {
+  width: 36px;
+}
+
+#username {
+  vertical-align: super;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 25px;
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
+#corpus {
+  vertical-align: super;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 25px;
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
+#authorized {
+  display: inline-block;
+  position: relative;
+  left: 192px;
+  bottom: 20px;
+}
+
+a.class3:link, a.class3:visited {
+  color: #336699; */
+    font-family: 'Comic Sans MS';
+    /* font-size: 20px; */
+    /* text-decoration: none; */
+    /* background-color: #cccccc; */
+    /* padding: 3px; */
+    /* border: 1px solid #666666; */
+    margin-left: 34px;
     color: #004E63;
     font-weight: normal;
-    font-size: 25px;
-    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 15px;
+}
+
+a.class3:hover {
+  color:#cccccc;
+  font-family:'Comic Sans MS';
+  font-size:20px;
+  text-decoration:none;
+  background-color:#336699;
+  padding:10px;
+  border:1px solid #000033;
+}
+
+a.class3:active {
+  color: #336699; */
+  font-family: 'Comic Sans MS';
+  /* font-size: 20px; */
+  /* text-decoration: none; */
+  /* background-color: #cccccc; */
+  /* padding: 3px; */
+  /* border: 1px solid #666666; */
+  margin-left: 34px;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+#blocks{
+  margin: 20px 0 0 20px;
+}
+
+#search{
+  margin: 5px 0 10px 0px;
+  display: block;
+  border-radius: 4px;
+  font: 12px Arial, Tahoma, sans-serif;
+  color: #444;
+  width: 262px;
+  padding: 9px 13px;
+  border: 1px solid #1F6A7F;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px #C3DEE6, 0 0 0 4px #F9FFF9;
+  outline: none;
+  font: 14px/18px Arial, Tahoma, sans-serif;
+}
+
+#blocks button{
+  width: 288px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+  font: 16px/18px Arial, Tahoma, sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+
+}
+
+#menu {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: Georgia;
   }
-  #authorized {
-display: inline-block;
-    position: relative;
-    left: 192px;
-    bottom: 20px;
+#menu li {
+  list-style: none;
+  float: left;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  width: 180px;
+  text-align: center;
+  background: #004E63;
+  position: relative;
+  padding-top: 12px;
+  }
+#menu li ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 180px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 51px;
+  }
+#menu li ul li {
+  float: none;
+  height: 50px;
+  margin: 0;
+  width: 180px;
+  text-align: center;
+  background: #2E6E7F;
+  }
+
+#menu li a {
+  display: block;
+  width: 180px;
+  height: 33px;
+  color: #E0EEE0;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  }
+#menu li:hover ul, #menu li.jshover ul {
+  display: block;
+  }
+#menu li:hover, #menu li.jshover {
+  background: #C2DCC2;
+
+  }
+
+#menu li:hover a {
+  color:#004E63;
+}
+
+.dop {
+  color: #E0EEE0 !important;
 }

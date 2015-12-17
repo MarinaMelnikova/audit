@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="opentip.css">
+    <script src="opentip.js"></script>
     <script src="main.js"></script>
   </head>
 
@@ -11,49 +13,76 @@
       <img src="polytech_logo.svg" id="logo">
       <div id="authorized">
       <img src="icon3.png" id="icon">
-      <span id="username"></span>
+      <span id="username" data-ot="текст всплывающей подсказки"></span>
       </div>
 
-      <hr/>
-      <div class="line_button">
-        <button type="submit">ГЗ</button>
-        <button type="submit">11 к.</button>
-        <button type="submit">Мех. к.</button>
-        <button type="submit">5 к.</button>
-      </div>
+      <ul id="menu">
+        <li><a href="#">Графики</a>
+          <ul>
+            <li><a href="#" class="dop">Количество больших аудиторий</a></li>
+            <li><a href="#" class="dop">Количество аудиторий с проектором</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Диаграммы</a>
+          <ul>
+            <li><a href="#" class="dop">Доля лекционных аудиторий</a></li>
+            <li><a href="#" class="dop">Доля компьютерных классов</a></li>
+            <li><a href="#" class="dop">Доля практических аудиторий</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Инструкции к работе</a>
+        </li>
+        <li>
+          <a href="#" onclick="history.back(); return false;">Выход</a>
+        </li>
+      </ul>
 
-      <div class="line_button">
-        <button type="submit">Хим к.</button>
-        <button type="submit">4 к.</button>
-        <button type="submit">2 к.</button>
-        <button type="submit">НУК</button>
-      </div>
+      <form id="corpForm" action="select_auditor.html" >
+        <div>
+          <div class="line_button">
+            <button type="submit" data-ot="Opa" id="corp">ГЗ</button>
+            <button type="submit" id="corp">11 к.</button>
+            <button type="submit" id="corp">Мех. к.</button>
+            <button type="submit" id="corp">5 к.</button>
+          </div>
 
-      <div class="line_button">
-        <button type="submit">15 к.</button>
-        <button type="submit">НОЦ</button>
-        <button type="submit">10 к.</button>
-        <button type="submit">3 к.</button>
-      </div>
+          <div class="line_button">
+            <button type="submit" id="corp">Хим к.</button>
+            <button type="submit" id="corp">4 к.</button>
+            <button type="submit" id="corp">2 к.</button>
+            <button type="submit" id="corp">НУК</button>
+          </div>
 
-      <div class="line_button">
-        <button type="submit">6 к.</button>
-        <button type="submit">ГК</button>
-        <button type="submit">8 к.</button>
-        <button type="submit">1 к.</button>
-      </div>
+          <div class="line_button">
+            <button type="submit" id="corp">15 к.</button>
+            <button type="submit" id="corp">НОЦ</button>
+            <button type="submit" id="corp">10 к.</button>
+            <button type="submit" id="corp">3 к.</button>
+          </div>
 
-      <div class="line_button">
-        <button type="submit">ГК-2</button>
-        <button type="submit">9 к.</button>
-        <button type="submit">СК</button>
-        <button type="submit">Не опр.</button>
-      </div>
+          <div class="line_button">
+            <button type="submit" id="corp">6 к.</button>
+            <button type="submit" id="corp">ГК</button>
+            <button type="submit" id="corp">8 к.</button>
+            <button type="submit" id="corp">1 к.</button>
+          </div>
+
+          <div class="line_button">
+            <button type="submit" id="corp">ГК-2</button>
+            <button type="submit" id="corp">9 к.</button>
+            <button type="submit" id="corp">СК</button>
+            <button type="submit" id="corp">Не опр.</button>
+          </div>
+        </div>
+      </form>
     </div>
 
     <script>
       console.log(localStorage.login);
       username.textContent = localStorage.login;
+
     </script>
   </body>
 </html>
