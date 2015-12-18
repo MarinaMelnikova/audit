@@ -34,7 +34,7 @@
       <button id="button" onclick="setRoom()">Создать</button>
     </form>
 
-    <form action="check.html" >
+    <form action="check.html" id="room-list">
       <ul>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">105</li></a>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">142</li></a>
@@ -76,15 +76,16 @@
 
 <!-- при вводе номера аудитории сортируется список "по совпедению"  -->
 <script type='text/javascript'>
-  $(function (){
-    $('#search').keyup(function (){
-      var val=this.value;
-      var re=new RegExp('^'+val,'i');
-      $('#korpus .auditor').each(function (){
-        $(this).parents('li').toggle(re.test($(this).text()));
-      });
-    });
-  });
+
+$(function() {
+$('#search').keyup(function() {
+var val = this.value;
+var re = new RegExp('^' + val,'i');
+$('#room-list a').each(function (){
+$(this).toggle(re.test($(this).text()));
+});
+});
+});
     username.textContent = localStorage.login;
     building.textContent = localStorage.building;
 </script>

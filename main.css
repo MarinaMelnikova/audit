@@ -64,8 +64,9 @@ h2{
 
 ul{
   padding: 0;
-   margin-left: 0px;
-   display: inline-block;
+  margin-left: 0px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 li{
