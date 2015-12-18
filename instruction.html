@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <script src='http://code.jquery.com/jquery-latest.js'></script>
+</head>
+
+<body>
+
+<div id="main">
+  <a href="index.html"><img src="polytech_logo.svg" id="logo"></a>
+  <div id="authorized">
+  <img src="icon3.png" id="icon">
+  <span id="username"></span>
+  <div class = "exit">
+    <a href="instruction.html">Инструкции</a>
+    <a href="sign_in.html" >Выход</a>
+  </div>
+  </div>
+
+  <hr>
+
+<div class="instruction"><p>Здесь должны быть инструкции по использованию приложения!</p></div>
+
+</div>
+
+<script>
+  username.textContent = localStorage.login;
+
+  function setBuilding(link) {
+    localStorage.setItem('building', link.getAttribute('data-ot'));
+  }
+</script>
+  </body>
+</html>

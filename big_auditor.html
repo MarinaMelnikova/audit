@@ -10,26 +10,26 @@
 <body>
 
 <div id="main">
-    <img src="polytech_logo.svg" id="logo">
+    <a href="index.html"><img src="polytech_logo.svg" id="logo"></a>
     <div id="authorized">
     <img src="icon3.png" id="icon">
     <span id="username"></span>
     <div class = "exit">
-      <a href="#">Инструкции</a>
+      <a href="instruction.html">Инструкции</a>
       <a href="sign_in.html" >Выход</a>
     </div>
 </div>
 
   <ul id="menu">
-    <li >
-      <a href="index.html">Список Зданий</a>
-    </li>
-    <li>
-      <a href="auditory_projector.html">Аудитории с проектором</a>
-    </li>
-    <li class="active">
-      <a href="big_auditor.html" >Большие аудитории</a>
-    </li>
+    <a href="index.html">
+      <li>Список Зданий</li>
+    </a>
+    <a href="auditory_projector.html">
+      <li>Аудитории с проектором</li>
+    </a>
+    <a href="big_auditor.html">
+      <li class="active">Большие аудитории</li>
+    </a>
   </ul>
 <div id="chart_div" style="margin-top: 0px; height: 600px;"></div>
 </div>
@@ -39,7 +39,9 @@
     function doLogin(form) {
       localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
       form.submit(); // продолжаем сабмитить
+
     }
+username.textContent = localStorage.login;
 </script>
 
 <script>

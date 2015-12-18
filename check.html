@@ -15,12 +15,16 @@
     <img src="icon3.png" id="icon">
     <span id="username"></span>
     <div class = "exit">
-      <a href="#">Инструкции</a>
+      <a href="instruction.html">Инструкции</a>
       <a href="sign_in.html" >Выход</a>
     </div>
 </div>
 <hr/>
-<div id="building"></div>
+
+<div id="title">
+  <span id="building"></span>
+  <span id="room"></span>
+</div>
 
 <form method="post" >
     <div class="check2">
@@ -101,12 +105,9 @@
 
 
   <script>
-    function doLogin(form) {
-      localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
-      form.submit(); // продолжаем сабмитить
-    }
     username.textContent = localStorage.login;
     building.textContent = localStorage.building;
+    room.textContent = ' — ' + localStorage.room;
   </script>
 
   <script> // для количества компьютеров
@@ -133,7 +134,6 @@
       }
       });
       });
-
     }).call(this);
 </script>
 

@@ -257,7 +257,7 @@ li.active {
   background: #C2DCC2 !important;
 }
 
-li.active a{
+li.active {
   color: #004E63 !important;
 }
 
@@ -265,7 +265,7 @@ li.active a{
   color: #E0EEE0 !important;
 }
 
-#menu li a {
+#menu li  {
   display: block;
   width: 240px;
   height: 33px;
@@ -281,12 +281,9 @@ li.active a{
 
 #menu li:hover, #menu li.jshover {
   background: #C2DCC2;
-
+  color: #004E63;
   }
 
-#menu li:hover a {
-  color: #004E63;
-}
 
 /*чек*/
 #check {
@@ -412,7 +409,16 @@ input::-webkit-outer-spin-button {
   left: 32px;
 }
 
-#building {
+#title {
+  text-align: center;
+  color: #004E63;
+  font-weight: normal;
+  font-size: 23px;
+  font-family: 'Carrois Gothic', sans-serif;
+  margin-top: 23px;
+}
+
+.instruction {
   text-align: center;
   color: #004E63;
   font-weight: normal;
