@@ -21,22 +21,50 @@
 
   <hr>
   <div id="building"></div>
-	<div id="blocks">
+<div id="blocks">
+  <form id="auditor_Form" action="check.html" >
+  <span><h2>Выбор аудитории:</h2></span>
+  <input type="text" class="input" maxlength="30" placeholder="Введите номер аудитории" id="search"/>
 
-	<span><h2>Выбор аудитории:</h2></span>
-	<input type="text" class="input" maxlength="30" placeholder="Введите номер аудитории" id="search" />
-
-	<button id="button" onclick="add_to_the_audience()">Создать</button>
-
-	<ul id="korpus">
-		<li><a href="#"><div class="list"><span class="auditor" onclick="add_to_the_audience(105)" value = "105">105</span></a></div></li>
-		<li><div class="list"><a href="#"><span class="auditor">142</span></a></div></li>
-		<li><div class="list"><a href="#"><span class="auditor">230</span></a></div></li>
-		<li><div class="list"><a href="#"><span class="auditor">232</span></a></div></li>
-		<li><div class="list"><a href="#"><span class="auditor">240</span></a></div></li>
-	</ul>
-	</div>
+  <button id="button" onclick="add_to_the_audience()">Создать</button>
+</form>
+<form id="auditor_Form_" action="check.html" >
+  <ul id="korpus">
+    <li><a class="refer" href="#"><div class="list"><span class="auditor" onclick="add_to_the_audience(105)" value = "105">105</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">142</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">230</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">232</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">240</span></div></a></li>
+  </ul>
+  <ul id="korpus">
+    <li><a class="refer" href="#"><div class="list"><span class="auditor" onclick="add_to_the_audience(105)" value = "105">739</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">685</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">20</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">456</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">171</span></div></a></li>
+  </ul>
+  <ul id="korpus">
+    <li><a class="refer" href="#"><div class="list"><span class="auditor" onclick="add_to_the_audience(105)" value = "105">185</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">116a</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">116b</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">505</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">102</span></div></a></li>
+  </ul>
+   <ul id="korpus">
+    <li><a class="refer" href="#"><div class="list"><span class="auditor" onclick="add_to_the_audience(105)" value = "105">312</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">316</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">335</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">218</span></div></a></li>
+    <li><a href="check.html" class="refer"><div class="list"><span class="auditor">101</span></div></a></li>
+  </ul>
+  </form>
+  </div>
+  <button class="digramm" id="dtoggle" onclick="toggleDiagram()">Показать диаграмму видов аудиторий</button>
+<div id="piechart" style="margin: auto; margin-left: 100px; display: none"></div>
 </div>
+</div>
+
+
 
 
 <!-- при вводе номера аудитории сортируется список "по совпедению"  -->
@@ -51,20 +79,51 @@
     });
   });
 
-
-
-  <!-- при нажатии на уже имеющую аудитории, она появляется в поле ввода -->
-  window.onload = function () {
-      var ratevalue = document.getElementById("search");
-
-      var marks = document.getElementById("korpus").getElementsByTagName("span");
-      for (var i = 0; i < marks.length; i++) marks[i].onclick = function () {
-          ratevalue.value = this.innerHTML;
-
-      }
-  }
     username.textContent = localStorage.login;
     building.textContent = localStorage.building;
 </script>
+
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+
+
+<script>
+  google.setOnLoadCallback(drawChart);
+
+  function randNumber() {
+    return Math.floor((Math.random() * 100) + 1);
+  }
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Type', 'Number'],
+      ['Лекции',  randNumber()],
+      ['Практики', randNumber()],
+      ['Компьютерные', randNumber()],
+      ['Лабораторные', randNumber()]
+    ]);
+
+    var options = {
+      title: 'Виды аудиторий в здании',
+      backgroundColor: 'transparent',
+      width: 600,
+      height: 400
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
+
+  function toggleDiagram() {
+    if (piechart.style.display == 'none') {
+      piechart.style.display = '';
+      dtoggle.textContent = 'Скрыть диаграмму видов аудиторий';
+    } else {
+      piechart.style.display = 'none';
+      dtoggle.textContent = 'Показать диаграмму видов аудиторий';
+    }
+  }
+</script>
+
 </body>
 </html>

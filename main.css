@@ -17,6 +17,32 @@ body {
   height: 120px;
 }
 
+button.digramm{
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+    color: #004E63;
+    border: none;
+    width: 250px;
+    height: 34px;
+    /* display: inline-block; */
+    /* position: absolute; */
+    padding: 6px 20px;
+    border: 1px solid #C9DDC9;
+    border-radius: 15px;
+    color: #004E63;
+    font-weight: normal;
+    font-size: 10px !important;
+    /* width: 23%; */
+    /* margin: 19px 16px; */
+    margin-right: 3px;
+    margin-left: 230px;
+    height: 26px;
+    float: inherit;
+    background-color: #E0EEE0;
+    cursor: pointer;
+    outline: none;
+}
+
+}
 h1 {
   margin: 1em 0 0.75em;
   padding: 0 0 5px 0;
@@ -28,7 +54,7 @@ h1 {
 }
 
 h2{
-  margin: 0 0 0 0px;
+  margin: 0 0 0 69px;
   padding: 0 0 5px 0;
   color: #004E63;
   font-weight: normal;
@@ -46,8 +72,12 @@ li{
   list-style-type: none;
 }
 
+#auditor_Form {
+  margin-left: 190px;
+}
+
 .list{
-  width: 150px;
+  width: 130px;
   padding: 5px 10px 0;
   margin: 6px;
   background: #FEFEFE;
@@ -126,10 +156,15 @@ button {
   bottom: 20px;
 }
 
+.refer {
+  text-decoration: none !important;
+}
+
+/* аудитории*/
 #blocks{
   margin: 40px 0 0 25px;
 }
-
+/* аудитории*/
 #search{
   margin: 5px 0 10px 0px;
   display: block;
@@ -144,7 +179,7 @@ button {
   outline: none;
   font: 14px/18px Arial, Tahoma, sans-serif;
 }
-
+/* аудитории*/
 #blocks button{
   width: 288px;
   padding: 9px 13px;
@@ -159,6 +194,25 @@ button {
   color: #004E63;
   font-weight: normal;
   display: block;
+
+}
+/* чек*/
+#but_save{
+  width: 140px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+  font: 16px/18px Arial, Tahoma, sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+  margin: 20px 0 0px 35px;
+}
 
 }
 
@@ -234,20 +288,23 @@ li.active a{
   color: #004E63;
 }
 
-#check{
+/*чек*/
+#check {
    margin: 60px 0 0px 0;
 }
 
+
+/* чек */
 .check2{
   margin: 20px 0 0px 35px;
   display: block;
 }
-
+/*чек*/
 .check2_1{
   margin: 8px;
   display: block;
 }
-
+/*чек*/
 .check2_num {
   margin: 5px 0 10px 0px;
   display: block;
@@ -263,7 +320,7 @@ li.active a{
   font: 14px/18px Arial, Tahoma, sans-serif;
 
 }
-
+/*чек*/
 .check2_num_{
   margin: 5px 0 10px 0px;
   display: block;
@@ -278,7 +335,14 @@ li.active a{
   outline: none;
   font: 14px/18px Arial, Tahoma, sans-serif;
 }
+/*чек*/
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+     margin: 0px;
+    -webkit-appearance: none;
 
+        }
+/*чек*/
 .label{
   margin: 0 0 0 0px;
   padding: 0 0 5px 0;
@@ -287,7 +351,7 @@ li.active a{
   font-size: 16px;
   font-family: 'Carrois Gothic', sans-serif;
 }
-
+/*чек*/
 .label_{
   margin: 0 0 0 0px;
   padding: 0 0 5px 0;
@@ -297,23 +361,24 @@ li.active a{
   font-family: 'Carrois Gothic', sans-serif;
 
 }
-
+/*чек*/
 .radio_col{
    display: block;
 }
-
+/*чек*/
 .icon {
   display: inline-block;
   position: relative;
   margin:0 0 0 10px;
   border-radius: 70px;
-  background-color: #EFF4FF;
+  background: #004E63;
   box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   width: 55px;
   height: 24px;
   overflow: hidden;
+  content: "Нет";
 }
-
+/*чек*/
 .icon .handle {
   width: 24px;
   height: 24px;
@@ -322,12 +387,14 @@ li.active a{
   background: #FFF;
   font-size: 14px;
   line-height: 22px;
-}
 
+}
+/*чек*/
 .icon .handle:before {
   -webkit-font-smoothing: antialiased;
-}
 
+}
+/*чек*/
 .icon .handle:after {
   content: "Есть";
   color: #FFF;
@@ -335,11 +402,12 @@ li.active a{
   position: absolute;
   left: -28px;
 }
-
+/*чек*/
 .icon.on {
   background: #004E63;
-}
 
+}
+/*чек*/
   .icon.on .handle {
   left: 32px;
 }

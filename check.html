@@ -20,23 +20,25 @@
     </div>
 </div>
 <hr/>
+<div id="building"></div>
 
 <form method="post" >
     <div class="check2">
       <p>
       <label class="label">Тип аудитории:</label>
       <select class="check2_num">
-        <option>Лекционная</option>
-        <option>Практическая</option>
-        <option>Компьютерный класс</option>
-        <option>Лаборатория</option>
+    <option value=""></option>
+        <option value="lecture">Лекционная</option>
+        <option value="practice">Практическая</option>
+        <option value="compuclass">Компьютерный класс</option>
+        <option value="laboratory">Лаборатория</option>
         </select>
       </p>
     </div>
 
     <div class="check2">
       <label class="label"> Вмеcтимость </label>
-      <input type="number" class="check2_num" id="check2_" value="chairs_number" />
+      <input type="number" class="check2_num" id="check2_" value="peoplenum" />
     </div>
 
      <!-- стулья -->
@@ -48,9 +50,9 @@
     <div class="check2">
       <label class="label"> Тип столов: </label>
       <div class="radio_col">
-        <input type="radio" name="A">Амфитеатр</input><br>
-        <input type="radio" name="A">Парты</input><br>
-        <input type="radio" name="A">Компьютерные столы</input><br>
+        <input type="radio" name="A" value="table_amf">Амфитеатр</input><br>
+        <input type="radio" name="A" value="table_part">Парты</input><br>
+        <input type="radio" name="A" value="table_comp">Компьютерные столы</input><br>
       </div>
     </div>
 
@@ -64,16 +66,16 @@
         <input type="number" class="check2_num_" id="check2_" value="computer" />
       </div>
       <div class="check">
-        <input type="checkbox" value="Проектор" />Проектор
+        <input type="checkbox" value="Projector" />Проектор
       </div>
       <div class="check">
-        <input type="checkbox" value="Специальное оборудование" />Специальное оборудование
+        <input type="checkbox" value="Spec_equipment" />Специальное оборудование
       </div>
     </div>
 
     <div class="check2">
       <label class="label"> Количество розеток </label>
-      <input type="number" class="check2_num" id="check2_" value="chairs_number" />
+      <input type="number" class="check2_num" id="check2_" value="outlets_number" />
     </div>
     <div class="check2">
     <label class="label"> Наличие кондиционера </label>
@@ -84,13 +86,14 @@
     </div>
 
 
-
-
-
     <div class="check2">
       <label class="label"> Площадь аудитории </label>
-      <input type="number" class="check2_num" id="check2_" value="chairs_number" />
+      <input type="number" class="check2_num" id="check2_" value="Area" />
     </div>
+
+
+  <strong><input onclick="" type=button value="Сохранить" name="check" id="but_save"></strong>
+
 
   </form>
 </div>
@@ -102,6 +105,8 @@
       localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
       form.submit(); // продолжаем сабмитить
     }
+    username.textContent = localStorage.login;
+    building.textContent = localStorage.building;
   </script>
 
   <script> // для количества компьютеров
