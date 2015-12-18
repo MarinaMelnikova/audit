@@ -426,3 +426,10 @@ input::-webkit-outer-spin-button {
   font-family: 'Carrois Gothic', sans-serif;
   margin-top: 23px;
 }
+
+div.back {
+  display: inline-block;
+  position: relative;
+  top: 19px;
+  left: 25px;
+}
